@@ -75,6 +75,7 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                 }
                 else {
                     props.setValue(props.value + props.buttonValue)
+                    break
                 }
             }
             default: {

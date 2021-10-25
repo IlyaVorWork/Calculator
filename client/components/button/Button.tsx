@@ -69,6 +69,14 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                     break
                 }
             }
+            case '.': {
+                if (props.value.slice(-1) == '.') {
+                    break
+                }
+                else {
+                    props.setValue(props.value + props.buttonValue)
+                }
+            }
             default: {
                 if (props.value.length > 19){
                     break
@@ -79,7 +87,7 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                         break
                     }
                     else{
-                        props.setValue(props.value + `${props.buttonValue}`)
+                        props.setValue(props.value + props.buttonValue)
                         break
                     }
                 }

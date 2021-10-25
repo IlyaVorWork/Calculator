@@ -9,7 +9,7 @@ const Calculator: FunctionComponent = () => {
 
     const diggitButtons = ['=', ')','0', '(', '.', '3', '2', '1', '+', '6', '5', '4', '-', '9', '8', '7', 'delete', '*', '/', 'reset'].reverse()
 
-    const [value, setValue] = useState<string>('0')
+    const [value, setValue] = useState<string>('')
 
     return (
         <div className={classes.calc}>

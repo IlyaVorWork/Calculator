@@ -41,16 +41,18 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                 }
                 try {
                     let res = +eval(str).toFixed(13)
+                    if (res == Infinity || res == -Infinity) {
+                        props.setValue('Error')
+                        break
+                    }
+                    props.setValue(res.toString())
+                    break
                 } 
                 catch {
                     let res = 'Error'
-                }
-                if (res == Infinity || res == -Infinity) {
-                    props.setValue('Error')
+                    props.setValue(res)
                     break
                 }
-                props.setValue(res.toString())
-                break
             }
             case 'reset': {
                 props.setValue('0')

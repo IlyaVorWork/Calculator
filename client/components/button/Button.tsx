@@ -39,7 +39,11 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                     str = sstr.split('').reverse().join('')
                     console.log(str)
                 }
-                let res = +eval(str).toFixed(13)
+                try {
+                    let res = +eval(str).toFixed(13)
+                } catch {
+                    let res = 'Error'
+                }
                 if (res == Infinity || res == -Infinity) {
                     props.setValue('Error')
                     break

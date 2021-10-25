@@ -55,12 +55,12 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                 }
             }
             case 'reset': {
-                props.setValue('0')
+                props.setValue('')
                 break
             }
             case 'delete': {
                 let res = props.value.slice(0, -1)
-                res == '' || res == 'Erro' ? props.setValue('0') : props.setValue(res)
+                res == '' || res == 'Erro' ? props.setValue('') : props.setValue(res)
                 break
             }
             case '/':

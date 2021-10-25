@@ -41,7 +41,8 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
                 }
                 try {
                     let res = +eval(str).toFixed(13)
-                } catch {
+                } 
+                catch {
                     let res = 'Error'
                 }
                 if (res == Infinity || res == -Infinity) {
